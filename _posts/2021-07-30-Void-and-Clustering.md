@@ -8,7 +8,7 @@ Data reduction and effective visualization using a novel GPU accelerated stratif
 
 Tobias Rapp, Christoph Peters, and Carsten Dachsbacher
 
-Presented at IEEE VIS 2019, published in IEEE Transactions on Visualization and Computer graphics 2020.
+Accepted and presented at IEEE VIS 2019, published in IEEE Transactions on Visualization and Computer Graphics 2020.
 
 [Official version](https://doi.org/10.1109/TVCG.2019.2934335)
 
