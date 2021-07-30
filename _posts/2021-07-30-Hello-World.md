@@ -1,9 +1,7 @@
 ---
 layout: post
-title: First post!
+title: Hello World
 ---
-
-Hello world, this is my first post!
 
 I'm still working on some content for this blog, so please be patient.
 
