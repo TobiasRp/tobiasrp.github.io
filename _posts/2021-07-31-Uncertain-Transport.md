@@ -8,7 +8,7 @@ Extracting topological features in uncertain flows, modeled by stochastic differ
 
 Tobias Rapp and Carsten Dachsbacher
 
-Presented at the IEEE VIS conference in 2020.
+Proceedings of the IEEE VIS conference 2020.
 
 [Official version](https://doi.org/10.1109/VIS47514.2020.00010)
 

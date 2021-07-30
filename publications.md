@@ -25,7 +25,8 @@ Presented at IEEE VIS 2020, published in Transactions on Visualization and Compu
 #### Uncertain Transport in Unsteady Flows
 
 T. Rapp, C. Dachsbacher
-Presented at IEEE VIS 2020.
+
+Proceedings of IEEE VIS conference 2020.
 
 [Official version](https://doi.org/10.1109/VIS47514.2020.00010)
 
