@@ -8,7 +8,9 @@ permalink: /publications/
 
 T. Rapp
 
-PhD thesis [pdf](https://publikationen.bibliothek.kit.edu/1000131767/111311601)
+PhD thesis
+
+[Official version (pdf)](https://publikationen.bibliothek.kit.edu/1000131767/111311601)
 
 
 #### Visual Analysis of Large Multivariate Scattered Data using Clustering and Probabilistic Summaries
