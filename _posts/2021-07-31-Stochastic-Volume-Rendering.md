@@ -27,6 +27,6 @@ _We visualize an SPH dataset of a fluid that rotates a turbine using volume rend
 ### Downloads
 
 [Paper (Open Access)](https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121.pdf)
-[Video](https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-video.mp4)
-[Code](https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-code.zip)
+| [Video](https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-video.mp4)
+| [Code](https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-code.zip)
 

@@ -26,7 +26,7 @@ _We propose a sampling technique for data reduction to reduce e.g. large cosmolo
 ### Downloads
 
 [Author's version](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/preprint.pdf)
-[Supplementary document](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/suppl.pdf)
-[Video](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/video.mp4)
+| [Supplementary document](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/suppl.pdf)
+| [Video](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/video.mp4)
 
 
