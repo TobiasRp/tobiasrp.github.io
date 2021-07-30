@@ -3,7 +3,9 @@ layout: post
 title: Visualizing Transport and Mixing in Particle-based Fluid Flows
 ---
 
-Tobias Rapp and Carsten Dachsbacher
+Understanding fluid flows with a visual analysis approach and topological features.
+
+By Tobias Rapp and Carsten Dachsbacher
 
 Presented at the Vision, Modeling, and Visualization conference in 2019.
 
@@ -16,7 +18,7 @@ To gain insight into large, time-dependent particle-based fluid flows, we visual
 
 ### Images
 
-![FTLE and LCS](images/ftle_lcs.png)
+![FTLE and LCS](/images/ftype_lcs.png)
 
 _We visualize time-dependent transport and mixing in a multiphase fluid simulation of a fuel spray nozzle. Here, the different fluid types are illustrated together with particles close to Lagrangian coherent structures (black)._
 
