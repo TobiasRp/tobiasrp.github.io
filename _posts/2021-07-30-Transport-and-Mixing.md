@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualizing Transport and Mixing in Particle-based Fluid Flows
-tags: Scientific visualization, flows
+tags: scientific visualization, flows
 ---
 
 Understanding fluid flows with a visual analysis approach and by extracting topological features.
