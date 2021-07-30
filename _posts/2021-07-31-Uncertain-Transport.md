@@ -26,5 +26,5 @@ We visualize transport under uncertainties in the Red Sea. The backward diffusio
 ### Downloads
 
 [Author's version](https://cg.ivd.kit.edu/publications/2020/uncertain_transport/preprint.pdf)
-[Supplementary document](https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary.pdf)
-[Supplementary code](https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary_code.h)
+| [Supplementary document](https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary.pdf)
+| [Supplementary code](https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary_code.h)
