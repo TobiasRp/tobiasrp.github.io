@@ -4,11 +4,11 @@ title: Publications
 permalink: /publications/
 ---
 
-#### Visuelle Analyse großer Partikeldaten
+#### Visual Analysis of Large Particle Data
 
 T. Rapp
 
-PhD thesis
+PhD thesis, 2021.
 
 [Official version (pdf)](https://publikationen.bibliothek.kit.edu/1000131767/111311601)
 
