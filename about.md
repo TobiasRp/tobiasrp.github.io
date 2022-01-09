@@ -8,7 +8,9 @@ Hi, I'm Tobias and this is my personal blog!
 
 ### About me
 
-I am a data scientist at [inovex](https://www.inovex.de/en/), where I support our clients in analyzing and learning from big data.
+I am working as a development engineer at [Bosch](www.bosch.de), where I develop a vision-based driving assistance system.
+
+Beforehand, I worked as a data scientist at [inovex](https://www.inovex.de/en/), where I supported clients in analyzing and learning from visual data.
 
 I got my PhD from [Carsten Dachbacher's group](https://cg.ivd.kit.edu/index.php) at the Karlsruhe Institute of Technology in 2021, where I also received my M.Sc. in 2015 and my B.Sc. in 2013.
 
