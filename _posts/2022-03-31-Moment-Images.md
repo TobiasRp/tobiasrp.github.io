@@ -17,8 +17,8 @@ We present a novel image-based representation to interactively visualize large a
 
 ### Downloads
 
-[Author's version](files/moment_images/preprint.pdf)
-| [Video](files/moment_images/video.mp4)
-| [Supplementary document](files/moment_images/supplemental_document.pdf)
+[Author's version](/files/moment_images/preprint.pdf)
+| [Video](/files/moment_images/video.mp4)
+| [Supplementary document](/files/moment_images/supplemental_document.pdf)
 | [Code](https://github.com/TobiasRp/mray)
 
