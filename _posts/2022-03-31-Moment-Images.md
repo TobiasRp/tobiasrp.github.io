@@ -8,7 +8,7 @@ Image-based visualization of large, arbitrarily structured volumetric data.
 
 Tobias Rapp, Christoph Peters, and Carsten Dachsbacher
 
-Accepted and presented at PacificVis 2022, to be published in IEEE Transactions on Visualization and Computer Graphics.
+Accepted and presented at PacificVis 2022 and awarded with an honorable mention. Published in IEEE Transactions on Visualization and Computer Graphics, 2022.
 
 
 ### Abstract
@@ -17,7 +17,8 @@ We present a novel image-based representation to interactively visualize large a
 
 ### Downloads
 
-[Author's version](/files/moment_images/preprint.pdf)
+[Official version](https://doi.org/10.1109/TVCG.2022.3165346)
+| [Author's version](/files/moment_images/preprint.pdf)
 | [Video](/files/moment_images/video.mp4)
 | [Supplementary document](/files/moment_images/supplemental_document.pdf)
 | [Code](https://github.com/TobiasRp/mray)

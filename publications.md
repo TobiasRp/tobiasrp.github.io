@@ -4,6 +4,14 @@ title: Publications
 permalink: /publications/
 ---
 
+#### Image-based Visualization of Large Volumetric Data Using Moments
+
+T. Rapp, C. Peters, C. Dachsbacher
+
+Presented at IEEE PacificVis 2022 and awarded with an honorable mention, published in Transactions on Visualization and Computer Graphics, 2022.
+
+[Official version](https://doi.org/10.1109/TVCG.2022.3165346)
+
 #### Visual Analysis of Large Particle Data
 
 T. Rapp
