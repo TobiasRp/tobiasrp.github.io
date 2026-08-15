@@ -13,9 +13,7 @@ My master thesis at the Karlsruhe Institute of Technology, 2015.
 [![GitHub](https://img.shields.io/badge/GitHub-TobiasRp%2Fadaptive_rasterization-black?logo=github)](https://github.com/TobiasRp/adaptive_rasterization)
 
 I was surprised to find that I had never published the code for my master's
-thesis, so I uploaded it to GitHub:
-
-[Code](https://github.com/TobiasRp/adaptive_rasterization)
+thesis, so I uploaded it to GitHub.
 
 The repository contains a software rasterization framework that runs entirely
 on the GPU using CUDA and implements a form of adaptive rasterization.
