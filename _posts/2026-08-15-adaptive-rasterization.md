@@ -10,6 +10,8 @@ My master thesis at the Karlsruhe Institute of Technology, 2015.
 
 ### Repository on GitHub
 
+[![GitHub](https://img.shields.io/badge/GitHub-TobiasRp%2Fadaptive_rasterization-black?logo=github)](https://github.com/TobiasRp/adaptive_rasterization)
+
 I was surprised to find that I had never published the code for my master's
 thesis, so I uploaded it to GitHub:
 
@@ -39,3 +41,7 @@ inefficient for small, detailed displacements.
 Suffice to say, the idea never really took off. Partly because I never
 finished the corresponding research paper. And even though it's an
 interesting idea, it would likely require a costly hardware redesign.
+
+Software rendering of the Crytek Sponza scene (262,267 triangles)
+rendered in 84.3 ms on an NVIDIA GeForce 750 Ti (vs. 1.19 ms with OpenGL): 
+![Rendered Crytek Sponza scene](/images/sponza.png)
