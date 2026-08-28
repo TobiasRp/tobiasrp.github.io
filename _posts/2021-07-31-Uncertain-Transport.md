@@ -21,7 +21,7 @@ We study uncertainty in the dynamics of time-dependent flows by identifying barr
 
 ![Transport in the Red Sea](/images/dbs.png)
 
-We visualize transport under uncertainties in the Red Sea. The backward diffusion barrier strength (DBS) on the left indicates material surfaces that are maximally diffusive. Since the DBS assumes only small-scale stochastic deviations, we propose a complementary visualization (right) of the absolute scale of uncertainties in the Lagrangian frame.
+_We visualize transport under uncertainties in the Red Sea. The backward diffusion barrier strength (DBS) on the left indicates material surfaces that are maximally diffusive. Since the DBS assumes only small-scale stochastic deviations, we propose a complementary visualization (right) of the absolute scale of uncertainties in the Lagrangian frame._
 
 ### Downloads
 
