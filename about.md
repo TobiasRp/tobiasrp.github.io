@@ -10,7 +10,7 @@ Hi, I'm Tobias and this is my personal blog.
 
 I am a senior software engineer at [Bosch](https://www.bosch-mobility-solutions.com/en/), where I work on vision-based automotive perception for driver assistance and autonomous driving. My work combines computer vision, GPU computing, and high-performance software engineering in real-world, safety-critical environments.
 
-Before Bosch, I was a machine learning engineer at [inovex](https://www.inovex.de/en/), where I helped clients build data-driven solutions from visual data. I earned my PhD in computer science at the [Karlsruhe Institute of Technology](https://www.kit.edu/), where I worked on scientific visualization, large-scale data analysis, and GPU-accelerated methods. Earlier, I worked as a graphics engineer at Ubisoft Blue Byte, developing and optimizing rendering techniques in the engine behind the Assassin's Creed series.
+Before Bosch, I was a machine learning engineer at [inovex](https://www.inovex.de/en/), where I helped clients build data-driven solutions from visual data. I earned my PhD in computer science at the [Karlsruhe Institute of Technology](https://www.kit.edu/), where I worked on scientific visualization, large-scale data analysis, and GPU-accelerated methods. Earlier, I worked as a graphics engineer at [Ubisoft Blue Byte](https://www.ubisoft.com/de-de/company/careers/locations/germany/mainz), developing and optimizing rendering techniques in the engine behind the Assassin's Creed series.
 
 My background spans graphics, machine learning, and software engineering. I am especially interested in the intersection of performance, research, and practical software development.
 
