@@ -246,7 +246,11 @@ nav {
   border-bottom: 1px solid $lightGray;
 }
 
-.posts > .post:last-child {
+.posts>.post h1 {
+  font-size: 24px;
+}
+
+.posts>.post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
