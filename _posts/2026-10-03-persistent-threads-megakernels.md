@@ -1,4 +1,8 @@
-# Persistent Threads and Megakernels: From GPU Scheduling to LLM Inference
+---
+layout: post
+title: Persistent Threads and Megakernels: From GPU Scheduling to LLM Inference
+tags: CUDA, GPU programming, megakernels, LLM inference
+---
 
 Reading about recent megakernels for LLM inference brought me back to persistent threads and megakernels I used in my own GPU work.
 
@@ -6,7 +10,7 @@ Work scheduling determines how a parallel workload is distributed among processo
 
 These techniques also apply to low-latency inference, where kernel launch overhead and gaps between short, dependent operations contribute to execution time. Seeing these ideas take on a new role is exciting, and I want to trace how they developed, what problems they solve, and when the extra control is worth its cost.
 
-## 1. Dynamic Scheduling on the GPU
+### 1. Dynamic Scheduling on the GPU
 
 Ray tracing provides a concrete example of uneven work: some rays need only a few intersection tests, while others require a long search through the scene. Assigning one ray to each GPU thread therefore produces different execution times. Threads execute in groups called warps, following the single-instruction, multiple-thread (SIMT) model. When threads take different branches, each path executes with only the participating threads active. This is warp divergence; threads that finish their rays early also become inactive while others continue.
 
@@ -14,7 +18,7 @@ At a coarser level, hardware assigns thread blocks to streaming multiprocessors 
 
 Numerically integrating differential equations produces a similar problem. Each thread might follow a particle through a flow field, with adaptive step sizes and different stopping conditions giving each trajectory a different amount of work. The trajectories also access different parts of the field, producing scattered memory accesses. Managing this imbalance and data access was a major challenge in my work on [visualizing stochastic differential equations](https://tobiasrp.github.io/Uncertain-Transport). If the field is partitioned across GPUs or nodes, access to remote data adds communication costs. Work assignment must then consider both the amount of computation and the location of its input data.
 
-## 2. Persistent threads and megakernels
+### 2. Persistent threads and megakernels
 
 In the ray-tracing example, a fixed number of workers stays active and processes successive batches of rays within one kernel launch. This reuse is what makes the execution persistent. A worker can be a thread, a warp, or an entire block, depending on how many threads cooperate on each task. Software decides which work comes next, while the hardware continues to schedule and execute the workers’ instructions.
 
@@ -30,7 +34,7 @@ I used this approach in [my CUDA software rasterizer](https://tobiasrp.github.io
 
 *Figure 1. Adaptive rasterization using the Whippletree megakernel framework. Light containers are scheduled stages; dark cards are operations within them. Blue queues hold stage inputs, and the orange edge adds new samples to the adaptive stage’s queue.*
 
-## 3. Why execution boundaries become a latency problem
+### 3. Why execution boundaries become a latency problem
 
 Uneven work is one reason to take control of GPU scheduling. Another appears when operations are short and dependent: the next operation needs a result from the previous one before it can start. Figures 2 and 3 are Nsight Systems timelines of a tiny transformer generating one token for one sequence (batch size one). Each blue block marks GPU kernel activity. In the PyTorch eager execution shown in Figure 2, the blocks are separated by visible idle intervals. Those intervals add to the *critical path*, the chain of dependent work that determines when the token is ready. The marked decoding step takes 3.202 ms in this capture.
 
@@ -48,7 +52,7 @@ Several costs can create such gaps. The CPU must submit each kernel, which can l
 
 Graph replay helps in real inference systems too: in NVIDIA’s llama.cpp profile, GPU-side launch gaps, rather than CPU submission, limited the measured case, and graphs reduced them. A graph still runs separate kernels, so dependent stages retain their boundaries and cannot pass registers or shared memory directly from one to the next. [NVIDIA’s nv-WaveNet implementation](https://developer.nvidia.com/blog/nv-wavenet-gpu-speech-synthesis/) took a further step for sequential audio generation: single-kernel designs generate multiple dependent samples per launch, and its persistent variant keeps weights in registers across samples. That removes more boundaries, but makes communication between worker blocks part of the remaining latency. The question is whether the work saved at boundaries exceeds the coordination costs introduced inside the kernel.
 
-## 4. The price of taking over scheduling
+### 4. The price of taking over scheduling
 
 A megakernel removes launch boundaries by putting more stages into one program, but those stages must share its resource budget. In [*Megakernels Considered Harmful* (2013)](https://research.nvidia.com/publication/2013-07_megakernels-considered-harmful-wavefront-path-tracing-gpus), Laine, Karras, and Aila found that a path tracer with separate, specialized kernels handled complex materials better than a single large kernel. Their result highlights two clear disadvantages: the large kernel uses more registers, and threads following different paths waste execution capacity.
 
@@ -58,7 +62,7 @@ Combining stages can also increase *warp divergence*: if lanes of one warp take 
 
 [Volta’s Independent Thread Scheduling](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#independent-thread-scheduling) made some coordination patterns easier. It keeps execution state, including a program counter, per thread, so one lane can wait while another lane in the same warp produces data. Earlier warp-level lock or producer–consumer schemes could deadlock because divergent lanes could not make that kind of independent progress. The hardware still issues instructions to groups of active lanes, so divergent paths remain costly, and per-kernel register and shared memory limits still constrain occupancy. Code must also use explicit synchronization and appropriate atomics rather than assume lanes move in lockstep, as the [Volta tuning guide](https://docs.nvidia.com/cuda/volta-tuning-guide/index.html#independent-thread-scheduling) explains. Volta expanded the ways to coordinate workers; whether a megakernel provides a benefit still depends on measuring saved boundaries against its resource and scheduling costs on the target GPU.
 
-## 5. Modern kernels schedule asynchronous work
+### 5. Modern kernels schedule asynchronous work
 
 Volta’s Independent Thread Scheduling expanded the coordination patterns possible inside a kernel. A matrix multiplication processes inputs in *tiles*, small chunks that fit in fast on-chip storage. If the kernel waits for each tile before computing, memory latency enters every iteration. [CUTLASS](https://docs.nvidia.com/cutlass/latest/media/docs/cpp/efficient_gemm.html#pipelining) uses *software pipelining*: while computation uses one tile, a second buffer receives the next. Workers track when each buffer is full, consumed, and safe to reuse. This hides latency at the cost of more shared memory, which can reduce occupancy.
 
@@ -74,7 +78,7 @@ Keeping several tiles in flight needs buffers and readiness signals. Their live 
 
 CUTLASS also has [persistent matrix-multiplication kernels](https://docs.nvidia.com/cutlass/latest/media/docs/cpp/efficient_gemm.html#hopper-warp-specialization) whose worker blocks process several output tiles. A megakernel spanning multiple operators extends this scheduling idea: it must decide when different operators may run, communicate their results, and manage their different resource needs. Efficient overlap inside one operator provides a foundation, but the larger schedule still has to earn its coordination cost.
 
-## 6. From persistent attention to full LLM inference megakernels
+### 6. From persistent attention to full LLM inference megakernels
 
 During LLM decoding, attention reads the *key/value (KV) cache*, the stored representations of earlier tokens. Requests in one batch can have very different context lengths, so assigning one fixed amount of work to each GPU block leaves some blocks idle while others process long histories. [FlashInfer](https://arxiv.org/abs/2501.01005) splits longer histories into chunks and plans how to distribute them among persistent blocks. This is the same load-balancing problem that motivated persistent ray-tracing workers in Section 1, now applied to attention. Its persistent kernel can also combine partial attention with final aggregation, but the scheduling scope remains the attention operator. The plan changes with the requests, while the kernel's launch size and workspace addresses stay fixed so the computation can participate in CUDA Graph replay. Persistence and graphs can therefore work together.
 
@@ -86,7 +90,7 @@ Those weights still come from GPU global memory. The gain is a steadier stream o
 
 Writing such schedules by hand becomes difficult as the program grows. [Mirage Persistent Kernel (MPK)](https://www.usenix.org/conference/osdi26/presentation/cheng) explores a compiler and runtime approach: it turns tensor programs into a graph of tasks at SM granularity, then executes them with decentralized scheduling inside a persistent megakernel. The task graph makes dependencies and opportunities to overlap operators explicit. Scheduling is still the central problem, but more of it moves from handwritten kernel logic into the compiler and in-kernel runtime.
 
-## 7. When megakernels might help
+### 7. When megakernels might help
 
 Persistence is worth investigating when a profile shows uneven work, short dependent kernels, or idle gaps where memory transfers and computation could overlap. The Nsight timelines in Figures 2 and 3 show why launch gaps matter, but also why CUDA Graphs are an essential baseline: they already remove much of the eager-mode delay. A larger kernel may shorten the remaining gaps, while its register use, lower occupancy, synchronization, and scheduling work can add time elsewhere. The balance changes with model size, batch size, context length, and GPU architecture.
 
