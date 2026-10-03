@@ -4,7 +4,7 @@ title: Stochastic Volume Rendering of Multi‐Phase SPH Data
 tags: scientific visualization, SPH, rendering
 ---
 
-Visualization of large SPH data using a stochastic approach to volume rendering.
+We render large, unstructured SPH simulations directly, without first converting the particle data into a volume. Particle sampling guided by the view and local data complexity makes ray marching faster, allowing the method to scale from interactive previews to more accurate renderings with multi-phase and single-scattering effects.
 
 This project started as a master thesis of Max that I supervised.
 

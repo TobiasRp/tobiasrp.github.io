@@ -4,7 +4,7 @@ title: Void-and-Cluster Sampling of Large Scattered Data and Trajectories
 tags: scientific visualization, sampling
 ---
 
-Data reduction and effective visualization using a novel GPU accelerated stratified sampling strategy.
+Data reduction and effective visualization using a novel GPU accelerated blue noise sampling strategy.
 
 Tobias Rapp, Christoph Peters, and Carsten Dachsbacher
 

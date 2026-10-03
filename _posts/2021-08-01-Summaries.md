@@ -4,7 +4,7 @@ title: Visual Analysis of Large Multivariate Scattered Data using Clustering and
 tags: scientific visualization, clustering, cosmology
 ---
 
-Interactive visual analysis of big scientific data by learning compact statistical models.
+We represent large, scattered data with probabilistic summaries. Effective visualizations are created by splatting anisotropic 1D, 2D, and 3D Gaussian mixture models. This compact representation supports interactive exploration of a cosmology dataset with 2.6 billion particles.
 
 Tobias Rapp, Christoph Peters, and Carsten Dachsbacher
 
@@ -28,4 +28,3 @@ _Our probabilistic summary of a cosmological dataset represents 2.6 billion part
 [Author's version](https://cg.ivd.kit.edu/publications/2020/data_summaries/preprint.pdf)
 | [Video](https://cg.ivd.kit.edu/publications/2020/data_summaries/video.mp4)
 | [Supplementary document](https://cg.ivd.kit.edu/publications/2020/data_summaries/suppl.pdf)
-
