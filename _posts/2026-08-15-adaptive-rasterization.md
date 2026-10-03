@@ -4,9 +4,9 @@ title: Adaptive Software Rasterization with CUDA
 tags: software rasterization, CUDA, GPU programming, rendering
 ---
 
-Adaptive Rasterization for Microdisplaced Surfaces
+A CUDA software rasterizer that runs the graphics pipeline entirely on the GPU. The framework manages rasterization and adaptive sampling in software, generating additional work when needed while achieving interactive frame rates.
 
-My master thesis at the Karlsruhe Institute of Technology, 2015.
+Karlsruhe Institute of Technology, 2015.
 
 ### Repository on GitHub
 

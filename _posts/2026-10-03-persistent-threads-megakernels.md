@@ -4,9 +4,7 @@ title: Persistent Threads and Megakernels
 tags: CUDA, GPU programming, megakernels, LLM inference
 ---
 
-From GPU Scheduling to LLM Inference
-
-Reading about recent megakernels for LLM inference brought me back to persistent threads and megakernels I used in my own GPU work.
+Reading about recent megakernels for LLM inference brought me back to persistent threads and megakernels I used in my own GPU work. This post traces both ideas from their origins in ray tracing to modern attention kernels and full-model LLM inference
 
 Work scheduling determines how a parallel workload is distributed among processors and when dependent tasks can execute. GPUs are easiest to keep busy when work can be divided into many independent tasks of similar size. When tasks differ in duration or generate new work, a fixed assignment can leave some processors idle while others remain busy. Persistent threads and megakernels give GPU programs more control over work assignment and execution across stages. This control offers opportunities to improve load balance and data locality, but also introduces coordination overhead and additional resource demands.
 
