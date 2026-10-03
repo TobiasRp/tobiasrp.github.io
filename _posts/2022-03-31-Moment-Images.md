@@ -16,9 +16,9 @@ Presented at PacificVis 2022, where the paper received an honorable mention. Pub
 
 ### Introduction
 
-Large simulations can be expensive to move to a workstation or ray march whenever a scientist changes the visualization. We built *moment images* to store a compact description of the scalar data along each pixel's viewing ray. Once generated, the images can be transferred to a workstation, where the transfer function can be changed without accessing the original simulation data.
+Large simulation data can be prohibitively large to move to a workstation or render whenever a scientist changes the visualization. We built *moment images* to store a compact description of the scalar data along each pixel's viewing ray. Once generated, the images can be transferred to a workstation, where the transfer function or viewing perspective can be changed without accessing the original simulation data.
 
-For the turbine dataset, rendering from a prepared moment image took 49.9 ms on a GeForce GTX 1080 Ti. Direct ray marching of the original particles took 18.7 seconds in the paper's comparable benchmark. Decoding and preparing a moment image are separate, one-time steps; these timings exclude single-scattering illumination.
+In detail, we transform the density in each pixel to the Fourier basis and store Fourier coefficients of a bounded signal, i.e. bounded trigonometric moments. To keep this image-based representation compact, we adaptively determine the number of moments in each pixel and present a novel coding and quantization strategy. 
 
 ### How it works
 
@@ -26,7 +26,7 @@ For the turbine dataset, rendering from a prepared moment image took 49.9 ms on 
 
 We ray march the dataset from a chosen camera and compute up to 100 Fourier coefficients, or *moments*, for the scalar signal along each pixel's ray. Unlike a conventional rendered image, these coefficients describe the signal rather than its final color. At rendering time, a bounded maximum-entropy spectral estimate (MESE) reconstructs an approximate signal. We apply the chosen transfer function to that signal and composite the samples along the ray. The bounded reconstruction keeps values within the signal's range and avoids some of the ringing artifacts of a truncated Fourier series.
 
-The images below use the same view and transfer function. The reference ray marches the original SPH particles; the reconstruction renders from a compressed moment image. Select either image to inspect it at full resolution.
+The images below use the same view and transfer function. The reference ray marches the original SPH particles; the reconstruction renders from a compressed moment image. 
 
 | Reference: direct ray marching | Reconstruction: bounded MESE |
 | :---: | :---: |
