@@ -4,7 +4,7 @@ title: Uncertain Transport in Unsteady Flows
 tags: scientific visualization, stochastic, flows
 ---
 
-Extracting topological features in uncertain flows, modeled by stochastic differential equations.
+We model uncertainty in time-dependent flows with stochastic differential equations and identify surfaces that resist or enhance diffusive transport. The method avoids expensive Monte Carlo simulation while also showing the absolute scale of uncertainty, making the resulting flow structures easier to interpret.
 
 Tobias Rapp and Carsten Dachsbacher
 
