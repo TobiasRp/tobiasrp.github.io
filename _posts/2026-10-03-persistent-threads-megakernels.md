@@ -1,8 +1,10 @@
 ---
 layout: post
-title: Persistent Threads and Megakernels: From GPU Scheduling to LLM Inference
+title: Persistent Threads and Megakernels
 tags: CUDA, GPU programming, megakernels, LLM inference
 ---
+
+From GPU Scheduling to LLM Inference
 
 Reading about recent megakernels for LLM inference brought me back to persistent threads and megakernels I used in my own GPU work.
 
