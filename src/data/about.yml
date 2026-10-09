@@ -1,0 +1,39 @@
+profile:
+  - label: Current role
+    value: Senior software engineer at Bosch
+  - label: Focus
+    value: Computer vision, GPU computing, and high-performance software
+  - label: Education
+    value: PhD in computer science, Karlsruhe Institute of Technology
+
+experience:
+  - role: Senior software engineer
+    organization: Bosch
+    period: Current
+    bullets:
+      - Vision-based automotive perception for driver assistance and autonomous driving.
+      - Computer vision and GPU computing in safety-critical software systems.
+  - role: Machine learning engineer
+    organization: inovex
+    period: Before Bosch
+    bullets:
+      - Built data-driven solutions from visual data for clients.
+  - role: Graphics engineer
+    organization: Ubisoft Blue Byte
+    period: Earlier role
+    bullets:
+      - Developed and optimized rendering techniques for the engine behind the Assassin's Creed series.
+
+education:
+  - degree: PhD in computer science
+    institution: Karlsruhe Institute of Technology
+    year: 2021
+
+sections:
+  - title: About this site
+    icon: i-mdi:information-outline
+    items:
+      - title: Technical writing and research
+        description: I share personal projects, technical notes, and research work here. Where possible, I link to code, papers, and supplementary material.
+      - title: Disclaimer
+        description: This is a personal site. The views expressed here are my own and are unrelated to current or former employers or business associates.
