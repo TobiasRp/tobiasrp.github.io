@@ -16,17 +16,15 @@ links:
     href: "https://github.com/TobiasRp/adaptive_rasterization"
 ---
 
-Karlsruhe Institute of Technology, 2015.
-
-### Repository on GitHub
-
-[![GitHub](https://img.shields.io/badge/GitHub-TobiasRp%2Fadaptive_rasterization-black?logo=github)](https://github.com/TobiasRp/adaptive_rasterization)
-
 I was surprised to find that I had never published the code for my master's
 thesis, so I uploaded it to GitHub.
 
 The repository contains a software rasterization framework that runs entirely
 on the GPU using CUDA and implements a form of adaptive rasterization.
+
+[Thesis](https://github.com/TobiasRp/adaptive_rasterization/blob/main/docs/Thesis.pdf)
+| [Code](https://github.com/TobiasRp/adaptive_rasterization)
+
 
 ## Adaptive Rasterization for Microdisplaced Surfaces
 
