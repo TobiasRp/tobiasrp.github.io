@@ -7,7 +7,7 @@ This repository contains the source for [tobiasrp.github.io](https://tobiasrp.gi
 | What to change | Where |
 | --- | --- |
 | Name, introduction, navigation, social links | `site.config.ts` |
-| About / CV | `src/data/about.yml` |
+| CV | `src/data/about.yml` |
 | Publications | `src/data/publications.bib` |
 | Projects | `src/content/projects/*.md` |
 | Writing | `src/content/posts/*.md` |

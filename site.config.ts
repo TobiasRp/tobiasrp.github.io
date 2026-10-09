@@ -43,7 +43,7 @@ export const siteConfig = defineSiteConfig({
 		},
 	],
 	navLinks: [
-		{ href: "/about", label: "About / CV" },
+		{ href: "/cv", label: "CV" },
 		{ href: "/projects", label: "Projects" },
 		{ href: "/publications", label: "Publications" },
 		{ href: "/posts", label: "Writing" },
@@ -51,8 +51,8 @@ export const siteConfig = defineSiteConfig({
 	footer: { showProfileLinks: true },
 	pageTitles: {
 		about: {
-			title: "About / CV",
-			description: "My background in visual computing and software engineering.",
+			title: "CV",
+			description: "Software engineer working in computer vision and GPU computing, with a background in graphics and scientific visualization.",
 		},
 		researches: {
 			title: "Publications",

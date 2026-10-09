@@ -1,39 +1,32 @@
-profile:
-  - label: Current role
-    value: Senior software engineer at Bosch
-  - label: Focus
-    value: Computer vision, GPU computing, and high-performance software
-  - label: Education
-    value: PhD in computer science, Karlsruhe Institute of Technology
-
 experience:
-  - role: Senior software engineer
-    organization: Bosch
-    period: Current
+  - role: Senior Software Engineer
+    organization: Robert Bosch GmbH
+    period: 2022 - present
     bullets:
-      - Vision-based automotive perception for driver assistance and autonomous driving.
-      - Computer vision and GPU computing in safety-critical software systems.
-  - role: Machine learning engineer
+      - Develop production camera perception software for automated driving, with a focus on embedded performance.
+  - role: Machine Learning Engineer
     organization: inovex
-    period: Before Bosch
+    period: "2021"
     bullets:
-      - Built data-driven solutions from visual data for clients.
-  - role: Graphics engineer
+      - Built GPU-accelerated video analysis software for a streaming application.
+  - role: Researcher
+    organization: Karlsruhe Institute of Technology
+    period: 2016 - 2021
+    bullets:
+      - Researched interactive visual analysis of large scientific datasets and GPU-accelerated methods.
+  - role: Graphics Engineer
     organization: Ubisoft Blue Byte
-    period: Earlier role
+    period: 2015 - 2016
     bullets:
-      - Developed and optimized rendering techniques for the engine behind the Assassin's Creed series.
+      - Optimized rendering performance in the Assassin's Creed game engine.
 
 education:
-  - degree: PhD in computer science
+  - degree: Doctor of Engineering (Dr.-Ing.) in Computer Science
     institution: Karlsruhe Institute of Technology
     year: 2021
-
-sections:
-  - title: About this site
-    icon: i-mdi:information-outline
-    items:
-      - title: Technical writing and research
-        description: I share personal projects, technical notes, and research work here. Where possible, I link to code, papers, and supplementary material.
-      - title: Disclaimer
-        description: This is a personal site. The views expressed here are my own and are unrelated to current or former employers or business associates.
+  - degree: Master of Science
+    institution: Karlsruhe Institute of Technology
+    year: 2015
+  - degree: Bachelor of Science
+    institution: Karlsruhe Institute of Technology
+    year: 2013
