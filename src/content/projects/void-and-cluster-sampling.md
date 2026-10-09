@@ -10,8 +10,14 @@ coverAlt: "Reduced dark matter cosmology dataset using void-and-cluster sampling
 coverCaption: "We propose a sampling technique for data reduction of large cosmological simulations of dark matter."
 badges: ["scientific visualization", "sampling"]
 links:
-  - label: "Publication"
+  - label: "Official version"
     href: "https://doi.org/10.1109/TVCG.2019.2934335"
+  - label: "Author's version"
+    href: "https://cg.ivd.kit.edu/publications/2019/void_and_cluster/preprint.pdf"
+  - label: "Supplementary document"
+    href: "https://cg.ivd.kit.edu/publications/2019/void_and_cluster/suppl.pdf"
+  - label: "Video"
+    href: "https://cg.ivd.kit.edu/publications/2019/void_and_cluster/video.mp4"
 ---
 
 Tobias Rapp, Christoph Peters, and Carsten Dachsbacher

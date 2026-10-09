@@ -11,7 +11,7 @@ coverCaption: >-
   The Finite-Time Lyapunov Exponent (FTLE) of a three-dimensional flow around a cylinder is shown. The FTLE indicates structures that define a time-dependent flow, but computing it is expensive. The article proposes a method to compute the FTLE efficiently for SPH datasets.
 badges: ["scientific visualization", "flows"]
 links:
-  - label: "Publication"
+  - label: "Official version"
     href: "https://www.sciencedirect.com/science/article/pii/S0045793018304183"
 ---
 

@@ -10,7 +10,9 @@ coverAlt: "Software rendering of the Crytek Sponza scene"
 coverCaption: "Software rendering of the Crytek Sponza scene (262,267 triangles) took 84.3 ms on an NVIDIA GeForce 750 Ti, compared with 1.19 ms using OpenGL."
 badges: ["software rasterization", "CUDA", "GPU programming", "rendering"]
 links:
-  - label: "GitHub"
+  - label: "Thesis"
+    href: "https://github.com/TobiasRp/adaptive_rasterization/blob/main/docs/Thesis.pdf"
+  - label: "Code"
     href: "https://github.com/TobiasRp/adaptive_rasterization"
 ---
 

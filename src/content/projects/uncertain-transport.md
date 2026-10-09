@@ -11,8 +11,14 @@ coverCaption: >-
   We visualize transport under uncertainty in the Red Sea. The backward diffusion barrier strength (DBS) on the left indicates material surfaces that are maximally diffusive. Since the DBS assumes only small-scale stochastic deviations, we propose a complementary visualization (right) of the absolute scale of uncertainties in the Lagrangian frame.
 badges: ["scientific visualization", "stochastic", "flows"]
 links:
-  - label: "Publication"
+  - label: "Official version"
     href: "https://doi.org/10.1109/VIS47514.2020.00010"
+  - label: "Author's version"
+    href: "https://cg.ivd.kit.edu/publications/2020/uncertain_transport/preprint.pdf"
+  - label: "Supplementary document"
+    href: "https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary.pdf"
+  - label: "Supplementary code"
+    href: "https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary_code.h"
 ---
 
 Tobias Rapp and Carsten Dachsbacher

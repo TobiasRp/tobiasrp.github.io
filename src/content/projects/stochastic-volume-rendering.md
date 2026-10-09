@@ -11,8 +11,14 @@ coverCaption: >-
   We visualize an SPH dataset of fluid rotating a turbine using volume rendering with surface shading (left). The dataset contains 86 million particles that are evaluated on the fly without significant preprocessing. Stochastic particle sampling substantially improves render times (center), allowing us to include single scattering during volume rendering (right).
 badges: ["scientific visualization", "SPH", "rendering"]
 links:
-  - label: "Publication"
+  - label: "Official version"
     href: "https://doi.org/10.1111/cgf.14121"
+  - label: "Open access PDF"
+    href: "https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121.pdf"
+  - label: "Video"
+    href: "https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-video.mp4"
+  - label: "Code"
+    href: "https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-code.zip"
 ---
 
 This project started with Max Piochowiak's master's thesis, which I supervised.

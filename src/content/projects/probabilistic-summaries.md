@@ -11,8 +11,14 @@ coverCaption: >-
   Our probabilistic summary of a cosmological dataset represents 2.6 billion particles partitioned into 5.3 million clusters. We model each cluster using combinations of low-dimensional Gaussian mixture models. This allows us to interactively visualize the position of particles by splatting 3D Gaussians and to create density-based 1D and 2D plots and a parallel coordinate plot. All of those views support interactive navigation and exploration by brushing (red) and linking. We render this massive dataset in 28 ms on an NVIDIA GTX 1080 Ti at a resolution of 1920x1080.
 badges: ["scientific visualization", "clustering", "cosmology"]
 links:
-  - label: "Publication"
+  - label: "Official version"
     href: "https://doi.org/10.1109/TVCG.2020.3030379"
+  - label: "Author's version"
+    href: "https://cg.ivd.kit.edu/publications/2020/data_summaries/preprint.pdf"
+  - label: "Supplementary document"
+    href: "https://cg.ivd.kit.edu/publications/2020/data_summaries/suppl.pdf"
+  - label: "Video"
+    href: "https://cg.ivd.kit.edu/publications/2020/data_summaries/video.mp4"
 ---
 
 Tobias Rapp, Christoph Peters, and Carsten Dachsbacher
