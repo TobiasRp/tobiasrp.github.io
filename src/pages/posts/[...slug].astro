@@ -177,6 +177,13 @@ const heroImage = post.data.heroImage;
 </Layout>
 
 <style is:global>
+	.post-body pre code {
+		background-color: transparent;
+		border-radius: 0;
+		color: inherit;
+		padding: 0;
+	}
+
 	.post-body > p:first-child::first-letter {
 		float: left;
 		margin-right: 0.55rem;
