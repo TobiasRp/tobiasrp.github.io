@@ -1,0 +1,34 @@
+---
+export function getStaticPaths() {
+  const legacyPaths = [
+  ["SPH-FTLE", "/projects/sph-ftle/"],
+  ["Transport-and-Mixing", "/projects/transport-and-mixing/"],
+  ["Void-and-Clustering", "/projects/void-and-cluster-sampling/"],
+  ["Stochastic-Volume-Rendering", "/projects/stochastic-volume-rendering/"],
+  ["Uncertain-Transport", "/projects/uncertain-transport/"],
+  ["Summaries", "/projects/probabilistic-summaries/"],
+  ["Moment-Images", "/projects/moment-images/"],
+  ["adaptive-rasterization", "/projects/adaptive-rasterization/"],
+  ["persistent-threads-megakernels", "/posts/persistent-threads-megakernels/"]
+  ];
+  return legacyPaths.map(([legacy, destination]) => ({
+    params: { legacy },
+    props: { destination },
+  }));
+}
+
+const { destination } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <link rel="canonical" href={new URL(destination, Astro.site)} />
+    <title>Page moved | Tobias Rapp</title>
+  </head>
+  <body>
+    <p>This page moved to <a href={destination}>{destination}</a>.</p>
+    <script is:inline define:vars={{ destination }}>window.location.replace(destination);</script>
+  </body>
+</html>
