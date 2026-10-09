@@ -26,7 +26,7 @@ thesis, so I uploaded it to GitHub.
 The repository contains a software rasterization framework that runs entirely
 on the GPU using CUDA and implements a form of adaptive rasterization.
 
-### Adaptive Rasterization for Microdisplaced Surfaces
+## Adaptive Rasterization for Microdisplaced Surfaces
 
 In my thesis I proposed a rasterization-based pipeline for real-time
 rendering. It efficiently renders highly detailed objects by applying

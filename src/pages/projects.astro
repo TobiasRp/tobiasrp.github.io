@@ -12,7 +12,7 @@ const statuses = ["active", "past", "unspecified"] as const;
 const labels = {
   active: {
     title: "Active projects",
-    description: "Ongoing research, infrastructure, and collaborative initiatives.",
+    description: "Ongoing research and software projects.",
   },
   past: {
     title: "Past projects",
@@ -30,7 +30,7 @@ const groups = statuses.map((status) => ({
 }));
 const pageTitle = siteConfig.pageTitles.projects.title || "Projects";
 const pageDescription = siteConfig.pageTitles.projects.description ||
-  "Selected lab and community projects with a focus on reproducible research infrastructure, learning analytics, and open collaboration.";
+  "Selected research and software projects.";
 ---
 
 <Layout title={pageTitle} description={pageDescription} schemaType="CollectionPage">
@@ -82,22 +82,22 @@ const pageDescription = siteConfig.pageTitles.projects.description ||
                   ]}
                 >
                   <div class="space-y-4">
-                    <div class="flex items-center justify-between gap-2">
-                      <div class="flex items-center gap-2">
-                        <span class={isActive ? "chip-status-active" : "chip-status-past"}>
+                    <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+                      <div class="flex shrink-0 items-center gap-2">
+                        <span class:list={[isActive ? "chip-status-active" : "chip-status-past", "shrink-0 whitespace-nowrap"]}>
                           {isActive && <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />}
                           {project.data.status}
                         </span>
                         {isFeatured && (
-                          <span class="chip-accent text-[11px]">
+                          <span class="chip-accent shrink-0 whitespace-nowrap text-[11px]">
                             <span class="i-mdi:star text-xs" aria-hidden="true" />
                             Featured
                           </span>
                         )}
                       </div>
-                      <time class="font-mono text-xs tabular-nums text-ink-500 dark:text-paper-400">
+                      <span class="w-full font-mono text-xs tabular-nums text-ink-500 dark:text-paper-400 sm:w-auto sm:text-right">
                         {project.data.period}
-                      </time>
+                      </span>
                     </div>
 
                     {isFeatured && project.data.cover && project.data.coverAlt && (
@@ -155,7 +155,7 @@ const pageDescription = siteConfig.pageTitles.projects.description ||
                           {role}
                         </span>
                       )}
-                      {project.data.tech.slice(0, 3).map((tech) => (
+                      {project.data.badges.slice(0, 3).map((tech) => (
                         <span class="scholarly-pill">{tech}</span>
                       ))}
                     </div>

@@ -38,24 +38,23 @@ export interface SiteConfigInput
 
 const defaultNavLinks: SiteConfig["navLinks"] = [
 	{ href: "/about", label: "About" },
-	{ href: "/researches", label: "Research" },
-	{ href: "/teaching", label: "Teaching" },
 	{ href: "/projects", label: "Projects" },
+	{ href: "/publications", label: "Publications" },
 	{ href: "/posts", label: "Blog" },
 ];
 
 const defaultPageTitles: SiteConfig["pageTitles"] = {
 	about: {
 		title: "About",
-		description: "Academic background, appointments, and service.",
+		description: "Experience and education in visual and accelerated computing.",
 	},
 	researches: {
 		title: "Publications",
-		description: "Peer-reviewed publications, working papers, and essays.",
+		description: "Research in visualization, graphics, and GPU computing.",
 	},
 	projects: {
 		title: "Projects",
-		description: "Selected research, infrastructure, and community projects.",
+		description: "Selected research and software projects.",
 	},
 	teaching: {
 		title: "Teaching",
@@ -63,7 +62,7 @@ const defaultPageTitles: SiteConfig["pageTitles"] = {
 	},
 	posts: {
 		title: "Blog",
-		description: "Research notes, methods, and updates.",
+		description: "Technical notes and articles.",
 	},
 };
 
@@ -73,8 +72,8 @@ const defaultHomeBlocks: SiteConfig["homeBlocks"] = {
 	},
 	showcase: {
 		enabled: true,
-		title: "Featured Initiatives",
-		description: "Key research infrastructure, systems, and open scholarship",
+		title: "Selected projects",
+		description: "Research and software I've worked on",
 	},
 	publications: {
 		enabled: true,
@@ -94,7 +93,7 @@ const defaultHomeBlocks: SiteConfig["homeBlocks"] = {
  * defaults here so routine personalization stays short and type-safe.
  */
 export function defineSiteConfig(input: SiteConfigInput): SiteConfig {
-	const profileImage = input.hero.profileImage ?? "/profile.svg";
+	const profileImage = input.hero.profileImage ?? "/profile.jpg";
 	const profileAlt = input.hero.profileAlt ?? `Portrait of ${input.author}`;
 	const profileImageHeight = input.hero.profileImageHeight ?? 160;
 	const profileImageWidth = input.hero.profileImageWidth ?? 160;
