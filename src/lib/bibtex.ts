@@ -20,6 +20,7 @@ export interface BibEntry {
 	number?: string;
 	pages?: string;
 	abstract?: string;
+	note?: string;
 	category: string;
 	keywords: string[];
 	resources?: { label: string; href: string }[];
@@ -116,6 +117,7 @@ function toBibtex(paper: BibEntry): string {
 		pages: paper.pages,
 		doi: paper.doi,
 		url: paper.url,
+		note: paper.note,
 	};
 	return [`@${type}{${paper.id},`, ...Object.entries(fields)
 		.filter(([, value]) => value !== undefined && value !== '')
@@ -266,6 +268,7 @@ export function parseBibtex(raw: string): BibEntry[] {
 			number: text('number'),
 			pages: text('pages'),
 			abstract: text('abstract'),
+			note: text('note'),
 			category: publicField === 'yes' || publicField === 'pub' ? 'Publication' : publicField === 'wp' ? 'Working Paper' : publicField === 'wip' ? 'Work in Progress' : 'Other',
 			keywords: text('keywords')?.split(',').map((keyword) => keyword.trim()).filter(Boolean) ?? [],
 		});
