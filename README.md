@@ -9,6 +9,7 @@ This repository contains the source for [tobiasrp.github.io](https://tobiasrp.gi
 | Name, introduction, navigation, social links | `site.config.ts` |
 | CV | `src/data/about.yml` |
 | Publications | `src/data/publications.bib` |
+| Publication downloads, videos, and project links | `src/data/publication-resources.yml` |
 | Projects | `src/content/projects/*.md` |
 | Writing | `src/content/posts/*.md` |
 | Images and downloadable files referenced in articles | `public/images/`, `public/files/` |
