@@ -11,7 +11,7 @@ This repository contains the source for [tobiasrp.github.io](https://tobiasrp.gi
 | Publications | `src/data/publications.bib` |
 | Publication downloads, videos, and project links | `src/data/publication-resources.yml` |
 | Projects | `src/content/projects/*.md` |
-| Writing | `src/content/posts/*.md` |
+| Blog | `src/content/posts/*.md` |
 | Images and downloadable files referenced in articles | `public/images/`, `public/files/` |
 | Colors and typography | `uno.config.ts` |
 
