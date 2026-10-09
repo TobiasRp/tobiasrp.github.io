@@ -84,11 +84,3 @@ The final plot compares several of our quantization curves with randomly perturb
 ![Total bit count versus reconstruction error for proposed quantization curves and sampled alternatives](/images/turbine_quantization_pareto.png)
 
 Moment images are designed around a chosen view. The paper also explores limited camera changes, but regions outside the captured view contain no data to reconstruct.
-
-### Downloads
-
-[Official version](https://doi.org/10.1109/TVCG.2022.3165346)
-| [Author's version](/files/moment_images/preprint.pdf)
-| [Video](/files/moment_images/video.mp4)
-| [Supplementary document](/files/moment_images/supplemental_document.pdf)
-| [Code](https://github.com/TobiasRp/mray)

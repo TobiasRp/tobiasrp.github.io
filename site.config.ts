@@ -17,6 +17,7 @@ export const siteConfig = defineSiteConfig({
 	},
 	keywords: [
 		"GPU computing",
+		"machine learning",
 		"computer graphics",
 		"scientific visualization",
 		"computer vision",
@@ -24,7 +25,7 @@ export const siteConfig = defineSiteConfig({
 	affiliations: [
 		{
 			role: "Senior software engineer",
-			institution: "Bosch",
+			institution: "Robert Bosch",
 			url: "https://www.bosch-mobility-solutions.com/en/",
 		},
 	],
