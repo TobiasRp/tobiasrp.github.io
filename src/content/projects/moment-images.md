@@ -6,7 +6,8 @@ period: "2022"
 order: 1
 featured: true
 cover: ../../assets/projects/moment-images.png
-coverAlt: "Image-based Visualization of Large Volumetric Data Using Moments"
+coverAlt: "Turbine simulation rendered from moment images with single-scattering illumination"
+coverCaption: "A turbine simulation with about 100 million particles per time step. The rendering takes ~50 ms using a 52 MB moment image and a 5 MB image for single-scattering lighting on an NVIDIA GeForce 1080 Ti. The ray-marching reference takes multiple minutes and needs access to all particle data."
 badges: ["scientific visualization", "image-based visualization", "volume rendering", "moments", "MESE", "Fourier reconstruction"]
 links:
   - label: "GitHub"
@@ -22,10 +23,6 @@ Presented at PacificVis 2022, where the paper received an honorable mention. Pub
 | [Video](/files/moment_images/video.mp4)
 | [Supplementary document](/files/moment_images/supplemental_document.pdf)
 | [Code](https://github.com/TobiasRp/mray)
-
-![Turbine simulation rendered from moment images with single-scattering illumination](/images/turbine.png)
-
-*A turbine simulation with about 100 million particles per time step. The rendering takes ~50 ms using a 52 MB moment image and a 5MB image for the single-scattering lighting on an NVIDIA GeForce 1080 Ti. The ray-marching reference takes multiple minutes and needs access to all particle data.*
 
 ### Introduction
 

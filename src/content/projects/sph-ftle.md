@@ -6,7 +6,9 @@ period: "2018"
 order: 7
 featured: false
 cover: ../../assets/projects/sph-ftle.png
-coverAlt: "Highly Efficient Computation of Finite-Time Lyapunov Exponents (FTLE) on GPUs Based on Three-Dimensional SPH Datasets"
+coverAlt: "FTLE visualization of a three-dimensional flow around a cylinder"
+coverCaption: >-
+  The Finite-Time Lyapunov Exponent (FTLE) of a three-dimensional flow around a cylinder is shown. The FTLE indicates structures that define a time-dependent flow, but computing it is expensive. The article proposes a method to compute the FTLE efficiently for SPH datasets.
 badges: ["scientific visualization", "flows"]
 links:
   - label: "Publication"
@@ -24,12 +26,6 @@ Published in Computers & Fluids, 2018.
 ### Abstract
 
 ”Smoothed particle hydrodynamics” (SPH) is a particle method that becomes increasingly popular in different fields of science and engineering. Reason for the popularity are the different advantages in comparison to conventional grid-based computational fluid dynamics (CFD). One example is the much cheaper identification of ”Lagrangian coherent structures” (LCS) in fluid flows by means of the ”finite-time Lyapunov exponent” (FTLE). Schemes for the evaluation of FTLE fields based on SPH datasets already exist. Despite the smaller computational effort required in case of SPH data, their evaluation is still costly. This may be the reason that no investigations have been published presently which address the application of existing schemes to SPH-data in 3-D. Therefore in the current paper a new and highly efficient GPU implementation of an existing scheme for the evaluation of FTLE fields is proposed that enables the interactive analysis of large SPH datasets. The suitability of the scheme in case of 3-D datasets and the computational efficiency of the novel GPU implementation are demonstrated. Furthemore, the so called particle birthtime is presented as a cheap alternative to FTLE fields, even though it has a variety of limitations compared to FTLE fields.
-
-### Teaser
-
-![SPH FTLE](/images/ftle.png)
-
-_The Finite-Time Laypunov Exponent (FTLE) of a three-dimensional flow around a cylinder is shown. The FTLE indicates structures that define a time-dependent flow, however, the computation of the FTLE is computationally expensive. The article proposes a new computational method to efficiently compute the FTLE for SPH datasets._
 
 ### Notes
 

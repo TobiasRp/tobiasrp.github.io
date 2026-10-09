@@ -20,6 +20,7 @@ interface Props {
   transitionKey: string;
   cover?: ImageMetadata;
   coverAlt?: string;
+  coverCaption?: string;
   facts?: Fact[];
   tags?: string[];
   highlights?: string[];
@@ -34,6 +35,7 @@ const {
   transitionKey,
   cover,
   coverAlt,
+  coverCaption,
   facts = [],
   tags = [],
   highlights = [],
@@ -63,7 +65,7 @@ const {
 
   {cover && coverAlt && (
     <figure
-      class="overflow-hidden rounded-2xl bg-paper-200 dark:bg-ink-800"
+      class="space-y-3"
       transition:name={`${transitionKey}-cover`}
     >
       <Image
@@ -77,8 +79,13 @@ const {
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        class="aspect-[16/9] h-auto w-full object-cover object-top"
+        class="h-auto max-h-[36rem] w-full rounded-2xl bg-paper-200 object-contain dark:bg-ink-800"
       />
+      {coverCaption && (
+        <figcaption class="max-w-[50rem] font-sans text-sm leading-6 text-ink-600 dark:text-paper-300">
+          {coverCaption}
+        </figcaption>
+      )}
     </figure>
   )}
 

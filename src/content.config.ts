@@ -58,6 +58,7 @@ const projects = defineCollection({
 				draft: z.boolean().default(false),
 				cover: image().optional(),
 				coverAlt: text.optional(),
+				coverCaption: text.optional(),
 				badges: z.array(text).default([]),
 				tech: z.array(text).default([]),
 				highlights: z.array(text).default([]),

@@ -6,7 +6,8 @@ period: "2015; code published 2026"
 order: 0
 featured: true
 cover: ../../assets/projects/adaptive-rasterization.png
-coverAlt: "Adaptive Software Rasterization with CUDA"
+coverAlt: "Software rendering of the Crytek Sponza scene"
+coverCaption: "Software rendering of the Crytek Sponza scene (262,267 triangles) took 84.3 ms on an NVIDIA GeForce 750 Ti, compared with 1.19 ms using OpenGL."
 badges: ["software rasterization", "CUDA", "GPU programming", "rendering"]
 links:
   - label: "GitHub"
@@ -46,7 +47,3 @@ inefficient for small, detailed displacements.
 Suffice to say, the idea never really took off. Partly because I never
 finished the corresponding research paper. And even though it's an
 interesting idea, it would likely require a costly hardware redesign.
-
-Software rendering of the Crytek Sponza scene (262,267 triangles)
-rendered in 84.3 ms on an NVIDIA GeForce 750 Ti (vs. 1.19 ms with OpenGL):
-![Rendered Crytek Sponza scene](/images/sponza.png)

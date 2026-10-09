@@ -6,7 +6,9 @@ period: "2020"
 order: 4
 featured: false
 cover: ../../assets/projects/stochastic-volume-rendering.jpg
-coverAlt: "Stochastic Volume Rendering of Multi‐Phase SPH Data"
+coverAlt: "Three renderings of a turbine flow showing surface shading, particle sampling, and single scattering"
+coverCaption: >-
+  We visualize an SPH dataset of fluid rotating a turbine using volume rendering with surface shading (left). The dataset contains 86 million particles that are evaluated on the fly without significant preprocessing. Stochastic particle sampling substantially improves render times (center), allowing us to include single scattering during volume rendering (right).
 badges: ["scientific visualization", "SPH", "rendering"]
 links:
   - label: "Publication"
@@ -24,12 +26,6 @@ Published in Computer Graphics Forum, 2020.
 ### Abstract
 
 In this paper, we present a novel method for the direct volume rendering of large smoothed-particle hydrodynamics (SPH) simulation data without transforming the unstructured data to an intermediate representation. By directly visualizing the unstructured particle data, we avoid long preprocessing times and large storage requirements. This enables the visualization of large, time-dependent, and multivariate data both as a post-process and in situ. To address the computational complexity, we introduce stochastic volume rendering that considers only a subset of particles at each step during ray marching. The sample probabilities for selecting this subset at each step are thereby determined both in a view-dependent manner and based on the spatial complexity of the data. Our stochastic volume rendering enables us to scale continuously from a fast, interactive preview to a more accurate volume rendering at higher cost. Lastly, we discuss the visualization of free-surface and multi-phase flows by including a multi-material model with volumetric and surface shading into the stochastic volume rendering.
-
-### Teaser
-
-![Stochastic DVR](/images/stochastic_dvr.jpg)
-
-_We visualize an SPH dataset of a fluid that rotates a turbine using volume rendering with surface shading (left). The datasets contains 86 million particles that are evaluated on-the-fly without significant preprocessing. We employ stochastic particle sampling during the SPH evaluation which substantially improves render times (center). This enables us to include expensive single scattering during volume rendering (right)._
 
 ### Downloads
 
