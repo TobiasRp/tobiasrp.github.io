@@ -34,6 +34,7 @@ const status = data.status[0].toUpperCase() + data.status.slice(1);
     transitionKey={`project-${project.id}`}
     cover={data.cover}
     coverAlt={data.coverAlt}
+    coverCaption={data.coverCaption}
     facts={[
       { label: "Status", value: status },
       { label: "Period", value: data.period },
