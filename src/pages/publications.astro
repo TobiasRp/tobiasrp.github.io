@@ -45,7 +45,7 @@ const categoryIcons: Record<string, string> = {
 const totalPapers = papers.length;
 const pageTitle = siteConfig.pageTitles.researches.title || "Publications";
 const pageDescription = siteConfig.pageTitles.researches.description ||
-  "Peer-reviewed publications, workshop papers, and essays focusing on the flow of learning signals across scholarly and civic platforms.";
+  "Research in visualization, graphics, and GPU computing.";
 ---
 
 <Layout
@@ -87,7 +87,7 @@ const pageDescription = siteConfig.pageTitles.researches.description ||
               data-filter-section={categorySlug}
             >
               <header class="flex items-end justify-between gap-4 border-b border-paper-300/90 pb-3 dark:border-ink-700">
-				<h2 class="section-heading">{category === "Publication" ? "Publications" : category}</h2>
+				<h2 class="section-heading">{category === "Publication" ? "All publications" : category}</h2>
 				<p class="shrink-0 font-mono text-xs font-semibold tabular-nums text-ink-500 dark:text-paper-400">
                   {categoryPapers.length} {categoryPapers.length === 1 ? "entry" : "entries"}
                 </p>
