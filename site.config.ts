@@ -46,7 +46,7 @@ export const siteConfig = defineSiteConfig({
 		{ href: "/about", label: "About" },
 		{ href: "/projects", label: "Projects" },
 		{ href: "/publications", label: "Publications" },
-		{ href: "/posts", label: "Writing" },
+		{ href: "/posts", label: "Blog" },
 	],
 	footer: { showProfileLinks: true },
 	pageTitles: {
@@ -63,7 +63,7 @@ export const siteConfig = defineSiteConfig({
 			description: "Selected research and software projects.",
 		},
 		posts: {
-			title: "Writing",
+			title: "Blog",
 			description: "Technical notes and articles.",
 		},
 	},
@@ -76,7 +76,7 @@ export const siteConfig = defineSiteConfig({
 			title: "Selected publications",
 			description: "Peer-reviewed research",
 		},
-		posts: { title: "Latest writing", description: "Technical articles and notes" },
+		posts: { title: "Latest posts", description: "Technical articles and notes" },
 	},
 });
 
