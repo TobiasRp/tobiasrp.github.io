@@ -6,14 +6,14 @@ export const siteConfig = defineSiteConfig({
 	siteUrl: "https://tobiasrp.github.io",
 	description:
 		"Projects, publications, and technical writing on computer graphics, visualization, computer vision, and GPU computing.",
+	ogImage: "/images/turbine.png",
+	ogImageAlt: "Scientific visualization of a turbine flow field",
+	ogImageWidth: 1024,
+	ogImageHeight: 768,
 	hero: {
 		headline: "Visual and accelerated computing",
 		subheadline:
 			"I build high-performance visual computing systems, from scientific visualization and rendering to computer vision.",
-		profileImage: "/profile.jpg",
-		profileAlt: "Tobias Rapp outdoors",
-		profileImageWidth: 460,
-		profileImageHeight: 460,
 	},
 	keywords: [
 		"GPU computing",

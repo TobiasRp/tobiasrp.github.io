@@ -50,7 +50,7 @@ const seoTitle = title && !isHomePage ? `${title} | ${siteConfig.title}` : siteC
 const pageTitle = title || siteConfig.title;
 const seoDesc =
   description || siteConfig.description || siteConfig.hero.subheadline;
-const rawOgImage = image || siteConfig.ogImage || "/profile.jpg";
+const rawOgImage = image || siteConfig.ogImage || "/favicon.svg";
 const ogImage = buildAbsoluteUrl(rawOgImage, siteConfig.siteUrl);
 const resolvedImageAlt = imageAlt || siteConfig.ogImageAlt || pageTitle;
 const resolvedImageWidth = imageWidth ?? (!image ? siteConfig.ogImageWidth : undefined);

@@ -1,13 +1,13 @@
 ---
 title: "Void-and-Cluster Sampling of Large Scattered Data and Trajectories"
-summary: "Data reduction and effective visualization using a novel GPU accelerated blue noise sampling strategy."
+summary: "Blue-noise sampling of large scattered datasets and trajectories for data reduction and progressive visualization."
 status: past
-period: "2020"
+period: "2019-2020"
 order: 5
 featured: false
 cover: ../../assets/projects/void-and-clustering.png
 coverAlt: "Reduced dark matter cosmology dataset using void-and-cluster sampling"
-coverCaption: "We propose a sampling technique for data reduction of large cosmological simulations of dark matter."
+coverCaption: "The Dark Sky dark-matter dataset reduced to 5% with uniform void-and-cluster sampling."
 badges: ["scientific visualization", "sampling"]
 links:
   - label: "Official version"
@@ -29,6 +29,19 @@ Accepted and presented at IEEE VIS 2019, published in IEEE Transactions on Visua
 | [Supplementary document](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/suppl.pdf)
 | [Video](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/video.mp4)
 
+## Introduction
+
+Large simulations and measurements produce more scattered data points than is practical to store, transfer, or explore interactively. Keeping a random fraction reduces the data volume, but can leave gaps beside clusters of samples and overlook regions where the measured values vary strongly. We wanted a smaller, representative subset that covers the original data well and can be loaded progressively at different levels of detail.
+
+Our method selects existing points and spreads them out with a blue-noise pattern: samples keep their distance without forming a visible grid. It can also place more samples where the data values are complex. For time-dependent data, we extend the same idea to select trajectories rather than sampling each time step independently.
+
+## Why it works
+
+R. A. Ulichney introduced the [void-and-cluster method for dither array generation](https://doi.org/10.1117/12.152707) in 1993. We extend his method from regular image grids to scattered points with nonuniform spatial density.
+
+At each point, we compare the density of selected samples nearby with the density of *all* input points nearby. Accounting for the original density matters: a sparse part of the dataset should not be mistaken for a gap in the sampling, and denser parts should receive proportionally more samples.
+
+We start with a random subset, then repeatedly move a sample from the tightest cluster to the largest void until removing that sample would make its old position the next largest void. From there, we add new samples at the largest remaining voids until we reach the desired size. This reduces clumps and gaps without imposing a regular grid, and the order of additions gives useful smaller subsets for progressive loading. [Figure 2 in the paper](https://cg.ivd.kit.edu/publications/2019/void_and_cluster/preprint.pdf#page=3) illustrates the swap-and-fill steps.
 
 ## Abstract
 
