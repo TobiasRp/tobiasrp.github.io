@@ -71,6 +71,7 @@ export const aboutDataSchema = z
 						degree: optionalText,
 						institution: optionalText,
 						year: stringOrNumber.optional(),
+						grade: optionalText,
 					})
 					.strict(),
 			)
