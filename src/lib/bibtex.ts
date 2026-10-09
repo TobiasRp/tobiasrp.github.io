@@ -22,6 +22,7 @@ export interface BibEntry {
 	abstract?: string;
 	category: string;
 	keywords: string[];
+	resources?: { label: string; href: string }[];
 }
 
 export const citationStyleLabels = {

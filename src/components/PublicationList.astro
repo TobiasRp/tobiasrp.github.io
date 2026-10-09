@@ -100,6 +100,22 @@ const dialogId = `citation-dialog-${papers[0]?.id ?? "empty"}`;
                   </a>
                 )}
 
+                {paper.resources?.map((resource) => {
+                  const isProjectPage = resource.href.startsWith("/projects/");
+                  return (
+                    <a
+                      href={resource.href}
+                      target={isProjectPage ? undefined : "_blank"}
+                      rel={isProjectPage ? undefined : "noopener noreferrer"}
+                      class="publication-control action-link glass-control min-h-9 px-2.5 text-xs font-semibold leading-none"
+                    >
+                      <span class={isProjectPage ? "i-ph-arrow-right !text-sm" : "i-mdi:open-in-new !text-sm"} aria-hidden="true"></span>
+                      <span>{resource.label}</span>
+                      <span class="sr-only"> for {paper.title}{isProjectPage ? "" : ", opens in a new tab"}</span>
+                    </a>
+                  );
+                })}
+
                 {hasAbstract && (
                   <details class="group">
                     <summary class="publication-control action-link glass-control min-h-9 cursor-pointer list-none px-2.5 text-xs font-semibold leading-none">
