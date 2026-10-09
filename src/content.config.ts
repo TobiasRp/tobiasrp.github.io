@@ -3,13 +3,13 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const text = z.string().trim().min(1);
-const externalLink = z
+const resourceLink = z
 	.object({
 		label: text,
-		href: z.url({
-			protocol: /^https?$/,
-			message: 'Resource links must use an absolute HTTP(S) URL'
-		})
+		href: z.union([
+			z.url({ protocol: /^https?$/ }),
+			z.string().regex(/^\/(?!\/)\S+$/, 'Local resource links must use a site-root path')
+		])
 	})
 	.strict();
 const metadata = z.object({ label: text, value: text }).strict();
@@ -63,7 +63,7 @@ const projects = defineCollection({
 				tech: z.array(text).default([]),
 				highlights: z.array(text).default([]),
 				metadata: z.array(metadata).default([]),
-				links: z.array(externalLink).default([])
+				links: z.array(resourceLink).default([])
 			})
 			.superRefine((data, ctx) => {
 				if (data.cover && !data.coverAlt) {

@@ -11,8 +11,10 @@ coverCaption: >-
   We visualize time-dependent transport and mixing in a multiphase fluid simulation of a fuel spray nozzle. The different fluid types are illustrated together with particles close to Lagrangian coherent structures (black).
 badges: ["scientific visualization", "flows"]
 links:
-  - label: "Publication"
+  - label: "Official version"
     href: "https://doi.org/10.2312/vmv.20191330"
+  - label: "Author's version"
+    href: "https://cg.ivd.kit.edu/publications/2019/transportvis/161-169.pdf"
 ---
 
 Tobias Rapp and Carsten Dachsbacher

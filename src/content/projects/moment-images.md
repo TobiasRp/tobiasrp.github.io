@@ -10,7 +10,17 @@ coverAlt: "Turbine simulation rendered from moment images with single-scattering
 coverCaption: "A turbine simulation with about 100 million particles per time step. The rendering takes ~50 ms using a 52 MB moment image and a 5 MB image for single-scattering lighting on an NVIDIA GeForce 1080 Ti. The ray-marching reference takes multiple minutes and needs access to all particle data."
 badges: ["scientific visualization", "image-based visualization", "volume rendering", "moments", "MESE", "Fourier reconstruction"]
 links:
-  - label: "GitHub"
+  - label: "Official version"
+    href: "https://doi.org/10.1109/TVCG.2022.3165346"
+  - label: "Author's version"
+    href: "/files/moment_images/preprint.pdf"
+  - label: "Supplementary document"
+    href: "/files/moment_images/supplemental_document.pdf"
+  - label: "Supplementary code"
+    href: "/files/moment_images/supplementary_code.7z"
+  - label: "Video"
+    href: "/files/moment_images/video.mp4"
+  - label: "Code"
     href: "https://github.com/TobiasRp/mray"
 ---
 

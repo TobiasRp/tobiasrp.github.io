@@ -119,20 +119,6 @@ const {
     </div>
 
     <aside class="order-1 space-y-6 lg:order-2 lg:sticky lg:top-24" aria-label="Details and resources">
-      {facts.length > 0 && (
-        <section class="rounded-2xl bg-paper-100/90 p-4 dark:bg-ink-900/70 sm:p-5" aria-labelledby="detail-facts">
-          <h2 id="detail-facts" class="entry-title mb-4 text-[1.125rem]">Details</h2>
-          <dl class="space-y-4">
-            {facts.map((fact) => (
-              <div class="space-y-1 border-t border-paper-300/90 pt-3 first:border-0 first:pt-0 dark:border-ink-700">
-                <dt class="font-sans text-xs font-bold text-ink-500 dark:text-paper-400">{fact.label}</dt>
-                <dd class="font-sans text-sm leading-5 text-ink-800 dark:text-paper-200">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-      )}
-
       {resources.length > 0 && (
         <section aria-labelledby="detail-resources">
           <h2 id="detail-resources" class="entry-title mb-3 text-[1.125rem]">Resources</h2>
@@ -150,6 +136,20 @@ const {
               </a>
             ))}
           </div>
+        </section>
+      )}
+
+      {facts.length > 0 && (
+        <section class="rounded-2xl bg-paper-100/90 p-4 dark:bg-ink-900/70 sm:p-5" aria-labelledby="detail-facts">
+          <h2 id="detail-facts" class="entry-title mb-4 text-[1.125rem]">Details</h2>
+          <dl class="space-y-4">
+            {facts.map((fact) => (
+              <div class="space-y-1 border-t border-paper-300/90 pt-3 first:border-0 first:pt-0 dark:border-ink-700">
+                <dt class="font-sans text-xs font-bold text-ink-500 dark:text-paper-400">{fact.label}</dt>
+                <dd class="font-sans text-sm leading-5 text-ink-800 dark:text-paper-200">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
       )}
 
