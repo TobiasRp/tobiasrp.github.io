@@ -87,7 +87,7 @@ export default defineConfig({
 						"'Atkinson Hyperlegible', 'Noto Sans SC', 'Segoe UI', system-ui, sans-serif",
 				},
 				':where(h1, h2, h3, h4)': {
-					'font-family': "'Crimson Pro', Georgia, 'Times New Roman', serif",
+					'font-family': "'JetBrains Mono', 'SFMono-Regular', Consolas, monospace",
 					'letter-spacing': '-0.015em',
 				},
 			},
@@ -259,7 +259,7 @@ export default defineConfig({
 		fontFamily: {
 			sans:
 				"'Atkinson Hyperlegible', 'Noto Sans SC', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-			heading: "'Crimson Pro', Georgia, 'Times New Roman', 'Noto Serif SC', serif",
+			heading: "'JetBrains Mono', 'SFMono-Regular', Consolas, monospace",
 			mono:
 				"'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
 		},
