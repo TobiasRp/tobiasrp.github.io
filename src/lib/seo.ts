@@ -1,5 +1,5 @@
 import type { SiteConfig, SocialLink } from "../types/config";
-import { buildAbsoluteUrl, withTrailingSlash } from "./site-url";
+import { withTrailingSlash } from "./site-url";
 
 export type PageSchemaType =
 	| "AboutPage"
@@ -76,10 +76,6 @@ export function buildStructuredData(options: StructuredDataOptions) {
 	const websiteId = `${siteUrl}#website`;
 	const webpageId = `${canonicalUrl}#webpage`;
 	const imageId = `${canonicalUrl}#primaryimage`;
-	const profileImage = buildAbsoluteUrl(
-		siteConfig.hero.profileImage,
-		siteConfig.siteUrl,
-	);
 	const sameAs = siteConfig.socialLinks
 		.map((link) => link.href)
 		.filter((href) => /^https?:\/\//i.test(href));
@@ -89,10 +85,6 @@ export function buildStructuredData(options: StructuredDataOptions) {
 		"@id": personId,
 		name: siteConfig.author,
 		url: siteUrl,
-		image: {
-			"@type": "ImageObject",
-			url: profileImage,
-		},
 		...(siteConfig.affiliations[0]?.role
 			? { jobTitle: siteConfig.affiliations[0].role }
 			: {}),

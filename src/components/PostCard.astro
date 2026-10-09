@@ -72,13 +72,17 @@ const publishedAt = post.data.publishedAt.toLocaleDateString("en-US", {
         <h3
           class:list={[
             "font-heading font-semibold leading-[1.15] tracking-[-0.015em] text-ink-950 transition-colors group-hover:text-accent-700 dark:text-paper-50 dark:group-hover:text-accent-300",
-            featured ? "text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem]" : "text-[1.45rem]",
+            featured
+              ? heroImage
+                ? "text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem]"
+                : "max-w-[55rem] text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem]"
+              : "text-[1.45rem]",
           ]}
         >
           {post.data.title}
         </h3>
         {post.data.description && (
-          <p class:list={["text-ink-600 dark:text-paper-300", featured ? "text-base leading-7" : "line-clamp-3 text-sm leading-6"]}>
+          <p class:list={["text-ink-600 dark:text-paper-300", featured ? "max-w-[70ch] text-base leading-7" : "line-clamp-3 text-sm leading-6"]}>
             {post.data.description}
           </p>
         )}

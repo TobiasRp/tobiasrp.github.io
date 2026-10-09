@@ -70,12 +70,6 @@ export interface SiteConfig {
 	hero: {
 		headline: string;
 		subheadline: string;
-		profileAlt: string;
-		profileImage: string;
-		/** Optional: Profile image height in pixels (default: 160) */
-		profileImageHeight?: number;
-		/** Optional: Profile image width in pixels (default: 160) */
-		profileImageWidth?: number;
 		statusBadge?: string;
 	};
 	// --- Page Titles and Descriptions ---
