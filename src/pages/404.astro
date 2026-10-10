@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Page not found"
+  description="The page you requested could not be found."
+  noindex
+  canonicalPath="/404.html"
+>
+  <div class="page-stack">
+    <header class="page-header">
+      <p class="font-mono text-sm font-semibold text-accent-700 dark:text-accent-300">404</p>
+      <h1 class="page-title">Page not found</h1>
+      <p class="page-description">This address does not lead to a page on the site.</p>
+    </header>
+    <a href="/" class="action-link self-start">
+      Return home
+      <span class="i-ph-arrow-right text-base" aria-hidden="true"></span>
+    </a>
+  </div>
+</Layout>

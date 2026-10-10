@@ -1,0 +1,62 @@
+# Extra links mirrored from the matching project pages. Keys match publications.bib.
+rapp2022momentimages:
+  - label: Author version
+    href: /files/moment_images/preprint.pdf
+  - label: Supplementary document
+    href: /files/moment_images/supplemental_document.pdf
+  - label: Video
+    href: /files/moment_images/video.mp4
+  - label: Code
+    href: https://github.com/TobiasRp/mray
+  - label: Project page
+    href: /projects/moment-images/
+
+rapp2021summaries:
+  - label: Author version
+    href: https://cg.ivd.kit.edu/publications/2020/data_summaries/preprint.pdf
+  - label: Supplementary document
+    href: https://cg.ivd.kit.edu/publications/2020/data_summaries/suppl.pdf
+  - label: Video
+    href: https://cg.ivd.kit.edu/publications/2020/data_summaries/video.mp4
+  - label: Project page
+    href: /projects/probabilistic-summaries/
+
+rapp2020uncertaintransport:
+  - label: Author version
+    href: https://cg.ivd.kit.edu/publications/2020/uncertain_transport/preprint.pdf
+  - label: Supplementary document
+    href: https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary.pdf
+  - label: Supplementary code
+    href: https://cg.ivd.kit.edu/publications/2020/uncertain_transport/supplementary_code.h
+  - label: Project page
+    href: /projects/uncertain-transport/
+
+piochowiak2020stochastic:
+  - label: Open access PDF
+    href: https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121.pdf
+  - label: Video
+    href: https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-video.mp4
+  - label: Code
+    href: https://cg.ivd.kit.edu/publications/2020/stochastic_sph/cgf14121-code.zip
+  - label: Project page
+    href: /projects/stochastic-volume-rendering/
+
+rapp2020voidcluster:
+  - label: Author version
+    href: https://cg.ivd.kit.edu/publications/2019/void_and_cluster/preprint.pdf
+  - label: Supplementary document
+    href: https://cg.ivd.kit.edu/publications/2019/void_and_cluster/suppl.pdf
+  - label: Video
+    href: https://cg.ivd.kit.edu/publications/2019/void_and_cluster/video.mp4
+  - label: Project page
+    href: /projects/void-and-cluster-sampling/
+
+rapp2019transportmixing:
+  - label: Author version
+    href: https://cg.ivd.kit.edu/publications/2019/transportvis/161-169.pdf
+  - label: Project page
+    href: /projects/transport-and-mixing/
+
+dauch2018ftlegpu:
+  - label: Project page
+    href: /projects/sph-ftle/

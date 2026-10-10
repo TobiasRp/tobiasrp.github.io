@@ -1,0 +1,16 @@
+---
+const destination = "/about/";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
+    <link rel="canonical" href={new URL(destination, Astro.site)} />
+    <title>Page moved | Tobias Rapp</title>
+  </head>
+  <body>
+    <p>This page moved to <a href={destination}>About</a>.</p>
+    <script is:inline define:vars={{ destination }}>window.location.replace(destination);</script>
+  </body>
+</html>
