@@ -27,6 +27,7 @@ export interface Props {
   modifiedAt?: Date;
   tags?: string[];
   noindex?: boolean;
+  canonicalPath?: string;
 }
 
 const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -44,6 +45,7 @@ const {
   modifiedAt,
   tags,
   noindex = false,
+  canonicalPath,
 } = Astro.props;
 
 const seoTitle = title && !isHomePage ? `${title} | ${siteConfig.title}` : siteConfig.title;
@@ -55,7 +57,7 @@ const ogImage = buildAbsoluteUrl(rawOgImage, siteConfig.siteUrl);
 const resolvedImageAlt = imageAlt || siteConfig.ogImageAlt || pageTitle;
 const resolvedImageWidth = imageWidth ?? (!image ? siteConfig.ogImageWidth : undefined);
 const resolvedImageHeight = imageHeight ?? (!image ? siteConfig.ogImageHeight : undefined);
-const canonicalUrl = buildCanonicalUrl(Astro.url.pathname, siteConfig.siteUrl);
+const canonicalUrl = buildCanonicalUrl(canonicalPath ?? Astro.url.pathname, siteConfig.siteUrl);
 const twitterHandle = getTwitterHandle(siteConfig.socialLinks);
 const twitterCard =
   resolvedImageWidth &&
