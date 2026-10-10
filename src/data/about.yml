@@ -1,0 +1,44 @@
+experience:
+  - role: Senior Software Engineer
+    organization: Robert Bosch GmbH
+    period: 2022 - present
+    bullets:
+      - Develop production camera perception software for automated driving, with a focus on embedded performance.
+      - Profile and optimize real-time inference on an embedded AI accelerator using quantization and mixed precision, validated for accuracy and latency.
+  - role: Machine Learning Engineer
+    organization: inovex
+    period: "2021"
+    bullets:
+      - Built GPU-accelerated video analysis software for a streaming platform.
+  - role: Researcher
+    organization: Karlsruhe Institute of Technology
+    period: 2016 - 2021
+    bullets:
+      - Researched interactive visual analysis of large scientific datasets and GPU-accelerated methods.
+  - role: Graphics Engineer
+    organization: Ubisoft Blue Byte
+    period: 2015 - 2016
+    bullets:
+      - Optimized rendering performance in the Assassin's Creed game engine.
+
+education:
+  - degree: Doctor of Engineering (Dr.-Ing.) in Computer Science
+    institution: Karlsruhe Institute of Technology
+    year: 2021
+    grade: summa cum laude (with highest distinction)
+  - degree: Master of Science
+    institution: Karlsruhe Institute of Technology
+    year: 2015
+  - degree: Bachelor of Science
+    institution: Karlsruhe Institute of Technology
+    year: 2013
+
+sections:
+  - title: Teaching and thesis advising
+    items:
+      - title: Teaching at KIT
+        date: "2016–2020"
+        description: GPU and graphics programming labs; visualization lecture and exercises; computer graphics exercises.
+      - title: Thesis advising at KIT
+        date: "2016–2021"
+        description: Advised six bachelor's and six master's theses in graphics and visualization, spanning rendering and large-scale data.
