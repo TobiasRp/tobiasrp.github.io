@@ -115,6 +115,8 @@ export default defineConfig({
 			'font-sans text-base leading-7 text-ink-700 dark:text-paper-300',
 		'section-heading':
 			'font-heading text-2xl font-semibold leading-[1.08] tracking-[-0.015em] text-ink-900 dark:text-paper-100 sm:text-[1.75rem]',
+		'feature-section-heading':
+			'font-heading text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-ink-950 dark:text-paper-50 sm:text-4xl',
 
 		// Reusable editorial entry hierarchy: title → supporting text → metadata.
 		'entry-title':

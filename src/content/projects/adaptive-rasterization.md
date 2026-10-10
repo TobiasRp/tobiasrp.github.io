@@ -47,3 +47,15 @@ inefficient for small, detailed displacements.
 Suffice to say, the idea never really took off. Partly because I never
 finished the corresponding research paper. And even though it's an
 interesting idea, it would likely require a costly hardware redesign.
+
+## Scheduling Work on the GPU
+
+Running the pipeline in CUDA also meant scheduling its stages in software. I
+used a persistent megakernel based on Whippletree: GPU workers take tasks from
+stage-specific queues, and stages can add new tasks while the kernel is running.
+When adaptive sampling needs another fragment, it adds one to its queue; that
+fragment passes through displacement before returning to adaptive sampling.
+This handles work generated during rendering without a new kernel launch for
+each pass, but requires explicit queue management and synchronization. I explain
+the approach and its connection to modern AI inference in
+[Persistent Threads and Megakernels](/posts/persistent-threads-megakernels/).
