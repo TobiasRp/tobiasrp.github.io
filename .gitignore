@@ -12,3 +12,4 @@ dist/
 .pnpm-store/
 playwright-report/
 test-results/
+_posts/.obsidian/

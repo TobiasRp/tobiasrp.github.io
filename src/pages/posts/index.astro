@@ -66,14 +66,14 @@ const totalPosts = posts.length;
     {remainingPosts.length > 0 && (
       <section class="space-y-6" aria-labelledby="more-notes">
         <div class="flex items-baseline justify-between gap-4">
-          <h2 id="more-notes" class="font-heading text-3xl font-semibold tracking-[-0.02em] text-ink-950 dark:text-paper-50 sm:text-4xl">
+          <h2 id="more-notes" class="feature-section-heading">
             Archive
           </h2>
           <p class="m-0 font-mono text-xs tabular-nums text-ink-500 dark:text-paper-400">
             {remainingPosts.length} {remainingPosts.length === 1 ? "entry" : "entries"}
           </p>
         </div>
-        <ol class="m-0 grid list-none gap-y-10 p-0 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:gap-x-9 md:gap-y-12">
+        <ol class:list={["m-0 grid list-none gap-y-10 p-0", remainingPosts.length > 1 ? "md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:gap-x-9 md:gap-y-12" : "max-w-[44rem]"]}>
           {remainingPosts.map((post, index) => (
             <li class:list={["min-w-0", index % 2 === 1 && "md:mt-10"]}>
               <PostCard post={post} />

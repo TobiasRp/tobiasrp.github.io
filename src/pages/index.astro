@@ -109,6 +109,12 @@ const headline = siteConfig.hero.headline || about.name;
                 <span class="i-ph-arrow-down text-base" aria-hidden="true"></span>
               </a>
             )}
+            {showPosts && recentPosts.length > 0 && (
+              <a href="#latest-posts" class="action-link px-0">
+                Latest posts
+                <span class="i-ph-arrow-down text-base" aria-hidden="true"></span>
+              </a>
+            )}
             {about.socialLinks.map((link) => {
               const opensNewTab = /^https?:/i.test(link.href);
               return (
@@ -152,7 +158,7 @@ const headline = siteConfig.hero.headline || about.name;
       <section class="content-section" aria-labelledby="selected-projects">
         <div class="mb-5 flex flex-col gap-3 border-b border-paper-300/90 pb-4 dark:border-ink-700 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 id="selected-projects" class="section-heading">
+            <h2 id="selected-projects" class="feature-section-heading">
               {siteConfig.homeBlocks.showcase?.title || "Selected projects"}
             </h2>
             {siteConfig.homeBlocks.showcase?.description && (
@@ -167,8 +173,8 @@ const headline = siteConfig.hero.headline || about.name;
           </a>
         </div>
 
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-          <article class="bento-card-hero group flex flex-col justify-between md:col-span-2">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <article class="bento-card-hero group flex flex-col justify-between lg:col-span-2">
             <div>
               <div class="mb-3.5 flex flex-wrap items-center gap-x-2 gap-y-2">
                 <span class="chip-accent shrink-0 whitespace-nowrap text-[11px]">
@@ -271,32 +277,11 @@ const headline = siteConfig.hero.headline || about.name;
       </section>
     )}
 
-    {showPublications && selectedPapers.length > 0 && (
-      <section class="content-section" aria-labelledby="selected-publications">
-      <div class="mb-4 flex flex-col gap-3 border-b border-paper-300/90 pb-4 dark:border-ink-700 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <h2 id="selected-publications" class="section-heading">
-            {siteConfig.homeBlocks.publications.title}
-          </h2>
-          {siteConfig.homeBlocks.publications.description && (
-            <p class="mt-1 text-sm text-ink-600 dark:text-paper-300">{siteConfig.homeBlocks.publications.description}</p>
-          )}
-        </div>
-        <a href="/publications" class="action-link self-start px-0 sm:self-auto">
-          Browse all publications
-          <span class="i-ph-arrow-right text-base" aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <PublicationList papers={selectedPapers} />
-      </section>
-    )}
-
     {showPosts && recentPosts.length > 0 && (
       <section class="content-section" aria-labelledby="latest-posts">
       <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 id="latest-posts" class="font-heading text-3xl font-semibold tracking-[-0.02em] text-ink-950 dark:text-paper-50 sm:text-4xl">
+          <h2 id="latest-posts" class="feature-section-heading">
             {siteConfig.homeBlocks.posts.title}
           </h2>
           {siteConfig.homeBlocks.posts.description && (
@@ -313,12 +298,33 @@ const headline = siteConfig.hero.headline || about.name;
         <div>
           <PostCard post={primaryPost} variant="featured" />
           {secondaryPosts.length > 0 && (
-            <div class="mt-8 grid gap-8 sm:grid-cols-2">
-              {secondaryPosts.map((post) => <PostCard post={post} />)}
+            <div class="mt-8 grid gap-8">
+              {secondaryPosts.map((post) => <PostCard post={post} variant="featured" />)}
             </div>
           )}
         </div>
       )}
+      </section>
+    )}
+
+    {showPublications && selectedPapers.length > 0 && (
+      <section class="content-section" aria-labelledby="selected-publications">
+      <div class="mb-4 flex flex-col gap-3 border-b border-paper-300/90 pb-4 dark:border-ink-700 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 id="selected-publications" class="feature-section-heading">
+            {siteConfig.homeBlocks.publications.title}
+          </h2>
+          {siteConfig.homeBlocks.publications.description && (
+            <p class="mt-1 text-sm text-ink-600 dark:text-paper-300">{siteConfig.homeBlocks.publications.description}</p>
+          )}
+        </div>
+        <a href="/publications" class="action-link self-start px-0 sm:self-auto">
+          Browse all publications
+          <span class="i-ph-arrow-right text-base" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <PublicationList papers={selectedPapers} />
       </section>
     )}
   </div>

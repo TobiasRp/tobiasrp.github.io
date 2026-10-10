@@ -2,18 +2,18 @@ import { defineSiteConfig } from "./src/config/site";
 
 export const siteConfig = defineSiteConfig({
 	author: "Tobias Rapp",
-	title: "Tobias Rapp | Visual and accelerated computing",
+	title: "Tobias Rapp | Performance engineering for GPU and AI systems",
 	siteUrl: "https://tobiasrp.github.io",
 	description:
-		"Projects, publications, and technical writing on computer graphics, visualization, computer vision, and GPU computing.",
+		"I build and optimize compute-intensive software, from CUDA algorithms to real-time AI inference. The same focus on efficient execution shaped my PhD research in scientific visualization and earlier work in graphics.",
 	ogImage: "/images/turbine.png",
 	ogImageAlt: "Scientific visualization of a turbine flow field",
 	ogImageWidth: 1024,
 	ogImageHeight: 768,
 	hero: {
-		headline: "Visual and accelerated computing",
+		headline: "Performance engineering for GPU and AI systems",
 		subheadline:
-			"I build high-performance visual computing systems, from scientific visualization and rendering to computer vision.",
+			"I build and optimize compute-intensive software, from CUDA algorithms to real-time AI inference. The same focus on efficient execution shaped my PhD research in scientific visualization and earlier work in graphics.",
 	},
 	keywords: [
 		"GPU computing",
@@ -24,16 +24,16 @@ export const siteConfig = defineSiteConfig({
 	],
 	affiliations: [
 		{
-			role: "Senior software engineer",
+			role: "Senior Software Engineer",
 			institution: "Robert Bosch",
 			url: "https://www.bosch-mobility-solutions.com/en/",
 		},
 	],
 	researchInterests: [
 		"GPU computing",
-		"Computer vision",
-		"Rendering",
-		"Scientific visualization",
+		"AI Inference",
+		"Machine Learning",
+		"Visualization",
 	],
 	socialLinks: [
 		{ label: "GitHub", href: "https://github.com/TobiasRp", icon: "i-mdi:github" },
@@ -53,7 +53,7 @@ export const siteConfig = defineSiteConfig({
 	pageTitles: {
 		about: {
 			title: "About",
-			description: "Software engineer working in computer vision and GPU computing, with a background in graphics and scientific visualization.",
+			description: "Senior software engineer working on real-time AI inference and performance-critical systems, with a PhD in computer science and a background in scientific visualization and graphics.",
 		},
 		researches: {
 			title: "Publications",

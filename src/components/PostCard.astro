@@ -73,9 +73,7 @@ const publishedAt = post.data.publishedAt.toLocaleDateString("en-US", {
           class:list={[
             "font-heading font-semibold leading-[1.15] tracking-[-0.015em] text-ink-950 transition-colors group-hover:text-accent-700 dark:text-paper-50 dark:group-hover:text-accent-300",
             featured
-              ? heroImage
-                ? "text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem]"
-                : "max-w-[55rem] text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem]"
+              ? "max-w-[55rem] text-[1.625rem] sm:text-[1.75rem] lg:text-[1.875rem]"
               : "text-[1.45rem]",
           ]}
         >
@@ -97,7 +95,7 @@ const publishedAt = post.data.publishedAt.toLocaleDateString("en-US", {
             </li>
           ))}
         </ul>
-        <span class="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-sm font-bold text-accent-700 underline-offset-4 group-hover:underline dark:text-accent-300">
+        <span class="ml-auto inline-flex min-h-11 shrink-0 items-center gap-1.5 text-sm font-bold text-accent-700 underline-offset-4 group-hover:underline dark:text-accent-300">
           Read note
           <span class="i-ph-arrow-right text-sm transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></span>
         </span>
