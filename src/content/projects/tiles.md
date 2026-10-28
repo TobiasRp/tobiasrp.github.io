@@ -5,7 +5,7 @@ status: active
 period: "2026"
 order: 0
 featured: true
-cover: ../../assets/projects/tiles-comparison.svg
+cover: ../../assets/projects/tiles-comparison.png
 coverAlt: "Decode latency against context length for TileInfer, PyTorch and llama.cpp on an RTX 3050, with the memory-bandwidth floor"
 coverCaption: "Time per token against context length on an RTX 3050. TileInfer stays at 94 to 96% of the memory-bandwidth floor."
 badges: ["CUDA", "GPU programming", "megakernels", "LLM inference"]
