@@ -3,7 +3,7 @@ title: "Visualizing Transport and Mixing in Particle-based Fluid Flows"
 summary: "Understanding fluid flows with a visual analysis approach and by extracting topological features."
 status: past
 period: "2019"
-order: 6
+order: 7
 featured: false
 cover: ../../assets/projects/transport-and-mixing.png
 coverAlt: "Fluid types and Lagrangian coherent structures in a fuel spray nozzle simulation"

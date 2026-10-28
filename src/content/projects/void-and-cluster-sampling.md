@@ -3,7 +3,7 @@ title: "Void-and-Cluster Sampling of Large Scattered Data and Trajectories"
 summary: "Blue-noise sampling of large scattered datasets and trajectories for data reduction and progressive visualization."
 status: past
 period: "2019-2020"
-order: 5
+order: 6
 featured: false
 cover: ../../assets/projects/void-and-clustering.png
 coverAlt: "Reduced dark matter cosmology dataset using void-and-cluster sampling"

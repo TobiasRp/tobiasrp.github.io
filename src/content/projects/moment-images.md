@@ -3,7 +3,7 @@ title: "Image-based Visualization of Large Volumetric Data Using Moments"
 summary: "A compact representation of large volumetric datasets that supports interactive changes to the transfer function and limited changes to the viewing perspective."
 status: past
 period: "2021-2022"
-order: 1
+order: 2
 featured: true
 cover: ../../assets/projects/moment-images.png
 coverAlt: "Turbine simulation rendered from moment images with single-scattering illumination"

@@ -3,7 +3,7 @@ title: "Visual Analysis of Large Multivariate Scattered Data using Clustering an
 summary: "We represent large, scattered data with probabilistic summaries. Effective visualizations are created by splatting anisotropic 1D, 2D, and 3D Gaussian mixture models. This compact representation supports interactive exploration of a cosmology dataset with 2.6 billion particles."
 status: past
 period: "2020-2021"
-order: 2
+order: 3
 featured: false
 cover: ../../assets/projects/summaries.png
 coverAlt: "Linked visualizations of a cosmological dataset using probabilistic summaries"

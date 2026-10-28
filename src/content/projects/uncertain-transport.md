@@ -3,7 +3,7 @@ title: "Uncertain Transport in Unsteady Flows"
 summary: "We model uncertainty in time-dependent flows with stochastic differential equations and identify surfaces that resist or enhance diffusive transport. The method avoids expensive Monte Carlo simulation while also showing the absolute scale of uncertainty, making the resulting flow structures easier to interpret."
 status: past
 period: "2020"
-order: 3
+order: 4
 featured: false
 cover: ../../assets/projects/uncertain-transport.png
 coverAlt: "Diffusion barrier strength and uncertainty visualizations of transport in the Red Sea"

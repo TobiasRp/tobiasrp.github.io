@@ -3,7 +3,7 @@ title: "Highly Efficient Computation of Finite-Time Lyapunov Exponents (FTLE) on
 summary: "Efficient computation of the FTLE, a topological fluid flow feature, based on GPU acceleration."
 status: past
 period: "2018"
-order: 7
+order: 8
 featured: false
 cover: ../../assets/projects/sph-ftle.png
 coverAlt: "FTLE visualization of a three-dimensional flow around a cylinder"

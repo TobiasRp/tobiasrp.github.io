@@ -3,7 +3,7 @@ title: "Adaptive Software Rasterization with CUDA"
 summary: "A CUDA software rasterizer that runs the graphics pipeline entirely on the GPU. The framework manages rasterization and adaptive sampling in software, generating additional work when needed while achieving interactive frame rates."
 status: past
 period: "2015; code published 2026"
-order: 0
+order: 1
 featured: true
 cover: ../../assets/projects/adaptive-rasterization.png
 coverAlt: "Software rendering of the Crytek Sponza scene"
