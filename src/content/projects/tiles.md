@@ -1,6 +1,6 @@
 ---
 title: "Tiles: Scheduling LLM Decoding as a Graph of Tiles"
-summary: "A research runtime that turns LLM decoding from a graph of kernels into a graph of tiles. Tiles are the atomic unit of scheduled work: an offline planner assigns every tile to a fixed worker, and one persistent CUDA kernel executes that schedule for every token of Llama 3.2 1B on an 8 GB RTX 3050."
+summary: "A research runtime for low-latency LLM inference based on scheduling a graph of tiles. An offline planner assigns every tile to a fixed worker, and one persistent CUDA kernel executes that schedule for every token of Llama 3.2 1B on an 8 GB RTX 3050."
 status: active
 period: "2026"
 order: 0
@@ -18,13 +18,13 @@ links:
 
 Tiles tests an idea I had: the unit of scheduling for LLM inference should
 be the tile, not the kernel. A conventional runtime executes a graph of
-kernels, one per operator, and leaves it to the launch machinery to decide
-when each kernel starts and how its blocks spread over the SMs. Tiles
-reorganizes that kernel graph into a tile graph. Every operator is cut into
-tiles, each a small range of output rows together with the work that
-produces it, and dependencies run between tiles rather than between whole
-operators. Small operations such as norms and activations fold into the
-tiles next to them.
+kernels, one per operator, and leaves it to the hardware scheduler to
+decide when each kernel starts and how its blocks spread over the SMs.
+Tiles reorganizes that kernel graph into a graph of tiles. Every operator
+is partitioned into tiles, each a small range of output rows together
+with the work that produces it, and dependencies run between tiles rather
+than between whole operators. Small operations such as norms and
+activations fold into the tiles next to them.
 
 The idea builds on Hazy Research's
 ["Look Ma, No Bubbles!"](https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles)
@@ -65,12 +65,9 @@ measurements in detail.
   64 tokens per cooperative launch, with greedy selection inside the kernel.
 - **A CPU reference and parity checks** against Hugging Face Transformers,
   with calibrated BF16 tolerances.
-- **Baselines and a showcase command.** One command builds everything, runs
+- **Baselines and comparisons.** One command builds everything, runs
   the checks, measures TileInfer against PyTorch (eager and CUDA Graph
-  replay) and llama.cpp, and redraws the figures of the blog post.
-- **An architecture document and a development log** that describe the
-  design and every milestone, including the optimizations that were probed
-  and rejected.
+  replay) and llama.cpp.
 
 ## Scope and code release
 
